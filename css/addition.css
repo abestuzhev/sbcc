@@ -27,15 +27,15 @@ p {
 }
 
 
-.tabs a {
-    white-space: nowrap;
-    padding: 5px 10px;
-    border: none;
-}
+/*.tabs a {*/
+    /*white-space: nowrap;*/
+    /*padding: 5px 10px;*/
+    /*border: none;*/
+/*}*/
 
-.tabs .current a {
-    border: 1px solid #b19151;
-}
+/*.tabs .current a {*/
+    /*border: 1px solid #b19151;*/
+/*}*/
 
 
 .offers {
@@ -264,6 +264,16 @@ p {
 
     .content-box__body {
         margin-left: 140px;
+    }
+
+    .offers {
+        margin-bottom: 20px;
+    }
+
+    .offers-title {
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 12px;
     }
 }
 
