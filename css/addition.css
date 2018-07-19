@@ -18,6 +18,9 @@ p {
     font-family: 'MyriadPro', sans-serif;
 }
 
+.about-hotel-descr {
+    padding-bottom: 0 !important;
+}
 
 .brown-bg {
     background-color: #b19151;
@@ -36,8 +39,21 @@ p {
 
 
 .offers {
-    width: 100%;
+    /*width: 100%;*/
     box-sizing: border-box;
+    width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.offers-title {
+    font-size: 32px;
+    line-height: 40px;
+    font-family: 'Champagne_Limousines_Bold_0';
+    margin-bottom: 20px;
+    text-align: center;
+    color: #b19151;
 }
 
 .offers-list {
@@ -184,6 +200,13 @@ p {
 
 .offer-call__text span {
     color: #b19151;
+}
+
+@media screen and (max-width: 1280px) {
+    .offers {
+        width: 100%;
+        padding: 0 3%;
+    }
 }
 
 @media screen and (max-width: 1010px) {
