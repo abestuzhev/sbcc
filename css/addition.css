@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'MyriadPro';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/MyriadProRegular.eot');
+    src: url('../fonts/MyriadProRegular.eot?#iefix') format('embedded-opentype'), url('../fonts/MyriadProRegular.woff') format('woff'), url('../fonts/MyriadProRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MyriadPro';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/MyriadProBold.eot');
+    src: url('../fonts/MyriadProBold.eot?#iefix') format('embedded-opentype'), url('../fonts/MyriadProBold.woff') format('woff'), url('../fonts/MyriadProBold.ttf') format('truetype');
+}
+
+p {
+    font-family: 'MyriadPro', sans-serif;
+}
+
+
+.brown-bg {
+    background-color: #b19151;
+}
+
+
+.tabs a {
+    white-space: nowrap;
+    padding: 5px 10px;
+    border: none;
+}
+
+.tabs .current a {
+    border: 1px solid #b19151;
+}
+
+
+.offers {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.offers-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+.offers-item {
+    width: 25%;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.offers-card {
+    font-family: 'MyriadPro', sans-serif;
+}
+
+.offers-card__img {
+    width: 100%;
+    max-height: 360px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.offers-card__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.offers-card__link {
+    font-size: 18px;
+    color: #262320;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px dotted #262320;
+}
+
+
+/*content-box------------*/
+
+.content-box::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.content-img {
+    float: left;
+    margin-right: 20px;
+    width: 280px;
+}
+
+.content-img img {
+    width: 100%;
+    height: auto;
+}
+
+.content-box {
+    min-height: 55vh;
+}
+.content-box__body {
+    margin-left: 310px;
+    font-family: 'MyriadPro', sans-serif;
+}
+
+.content-box__important {
+    color: #997732;
+    margin: 26px 0;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 14px 30px;
+    border-top: 1px dotted #997732;
+    border-bottom: 1px dotted #997732;
+    font-family: 'MyriadPro', sans-serif;
+}
+
+.content-box__alert {
+    padding: 15px 24px;
+    background-color: #f8f7f6;
+    margin-bottom: 30px;
+    font-family: 'MyriadPro', sans-serif;
+}
+
+.content-box__alert-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.ul-list {
+    list-style-position: inside;
+    font-size: 17px;
+    list-style-image: url(../img/icon-star.png);
+    font-family: 'MyriadPro', sans-serif;
+}
+
+.ul-list__item {
+    margin-bottom: 5px;
+    font-family: 'MyriadPro', sans-serif;
+}
+
+.offer-call {
+    margin: 30px 0;
+    color: #262320;
+}
+
+.offer-call__btn-layout {
+    text-align: center;
+}
+
+.offer-call__btn {
+    display: inline-block;
+    padding: 10px 24px;
+    font-size: 24px;
+    background-color: #e3e3e3;
+    border-radius: 30px;
+    color: #262320;
+    margin-bottom: 14px;
+}
+
+.offer-call__text {
+    padding: 0 100px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.offer-call__text span {
+    color: #b19151;
+}
+
+@media screen and (max-width: 1010px) {
+    .offer-call__text {
+        padding: 0;
+    }
+}
+@media screen and (max-width: 890px) {
+
+    .about-hotel-descr {
+        line-height: 20px;
+    }
+    .offers-card {
+        text-align: center;
+    }
+    .offers-card__link {
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .offers-card__img {
+        margin-bottom: 2px;
+    }
+
+    .content-img {
+        width: 220px;
+    }
+
+    .content-box__body {
+        margin-left: 240px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .offers-list {
+        flex-flow: row wrap;
+    }
+    .offers-item {
+        width: 50%;
+        margin-bottom: 16px;
+    }
+
+    .offers-card__img {
+        max-height: 300px;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+
+    .content-img {
+        width: 120px;
+    }
+
+    .content-box__body {
+        margin-left: 140px;
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+
+    .content-img {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        margin-bottom: 14px;
+    }
+
+    .content-box__body {
+        margin: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 380px) {
+    .tabs {
+        display: block;
+        text-align: center;
+    }
+    .tabs li {
+        float: none;
+        display: inline-block;
+        margin: 0 10px 5px;
+        overflow: visible;
+    }
+}

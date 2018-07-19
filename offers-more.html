@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
+    <script type="text/javascript" src="http://192.168.1.1/scwn.js"></script>
+    <title>Сайт отеля</title>
+    <!--<link href="http://sbcc.ru/bitrix/cache/css/s1/main/kernel_main/kernel_main.css?152266787444417" type="text/css" rel="stylesheet"/>-->
+    <link href="http://sbcc.ru/bitrix/js/fileman/sticker.min.css?149717798424594" type="text/css" rel="stylesheet"/>
+    <link href="http://sbcc.ru/bitrix/js/main/core/css/core_panel.min.css?149717798562265" type="text/css" rel="stylesheet"/>
+    <link href="css/template_d6447e7706f74cd53d090cb75619587e.css" type="text/css" data-template-style="true" rel="stylesheet"/>
+    <link href="http://sbcc.ru/bitrix/panel/main/popup.min.css?149717798520704" type="text/css" data-template-style="true" rel="stylesheet"/>
+    <link href="http://sbcc.ru/bitrix/panel/main/admin-public.min.css?149717798571939" type="text/css" data-template-style="true" rel="stylesheet"/>
+    <link href="http://sbcc.ru/bitrix/panel/main/hot_keys.min.css?14971779853150" type="text/css" data-template-style="true" rel="stylesheet"/>
+    <link href="http://sbcc.ru/bitrix/themes/.default/pubstyles.min.css?149717799446822" type="text/css" data-template-style="true" rel="stylesheet"/>
+    <link href="css/addition.css" type="text/css" data-template-style="true" rel="stylesheet"/>
+    
+    
+    <!--<script type="text/javascript" src="http://sbcc.ru/bitrix/cache/js/s1/main/kernel_main/kernel_main.js?1522667874269063"></script>-->
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script type="text/javascript" src="http://sbcc.ru/bitrix/js/fileman/sticker.min.js?149717798449835"></script>
+    <script type="text/javascript" src="http://sbcc.ru/bitrix/js/main/core/core_admin.min.js?149717798522432"></script>
+    <script type="text/javascript" src="http://sbcc.ru/bitrix/js/main/admin_tools.min.js?149717798545484"></script>
+    <script type="text/javascript" src="http://sbcc.ru/bitrix/js/main/popup_menu.min.js?14971779859738"></script>
+    <script type="text/javascript" src="http://sbcc.ru/bitrix/js/main/admin_search.min.js?14971779854820"></script>
+    <script type="text/javascript" src="http://sbcc.ru/bitrix/js/main/hot_keys.min.js?149717798512333"></script>
+    <script type="text/javascript" src="http://sbcc.ru/bitrix/js/main/public_tools.min.js?149717798524131"></script>
+    <script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js?149717798573480', '/bitrix/js/main/core/core_popup.js?149717798529812', '/bitrix/js/main/core/core_ajax.js?149717798521031', '/bitrix/js/main/json/json2.min.js?14971779853467', '/bitrix/js/main/core/core_ls.js?14971779857365', '/bitrix/js/main/session.js?14971779852511', '/bitrix/js/main/core/core_window.js?149717798574754', '/bitrix/js/main/core/core_date.js?149717798534241', '/bitrix/js/main/utils.js?149717798519858', '/local/templates/main/js/jquery-3.2.1.min.js?149717802086659', '/local/templates/main/js/slick.min.js?149717802041953', '/local/templates/main/js/main-menu.js?14971780201671', '/local/templates/main/js/content.js?1497178020593', '/local/templates/main/js/main.js?14971780203889', '/local/templates/main/js/jquery.fancybox.min.js?149717802045500']); </script>
+    <script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css?14971779852854', '/bitrix/js/main/core/css/core_popup.css?149717798529699', '/bitrix/js/main/core/css/core_date.css?14971779859657', '/local/templates/main/css/style.css?150600156958372', '/local/templates/main/css/jquery.fancybox.min.css?149717802010398', '/local/templates/main/components/bitrix/menu/top/style.css?1497178020490', '/local/templates/main/styles.css?15319169702255', '/local/templates/main/template_styles.css?1522745237574']); </script>
+
+
+</head>
+<body>
+
+
+<header class="not-main-header">
+    <div class="header">
+        <a href="/" class="header__logo">
+            <img src="./img/hotel-logo.png" alt="" class="header__logo-img">
+            <span class="header__logo-text">
+                                Корпоративный <br>
+                                центр
+                            </span>
+        </a>
+        <button type="button" class="header-btn header__menu" id="mobile-menu">Меню</button>
+        <a href="/booking/" class="header-btn header__item">Забронировать</a>
+        <a href="/about/how-to-find/" class="header-btn header__item">Помощь</a>
+        
+        
+        <button class="menu__close-btn">Закрыть[Х]</button>
+        <ul class="menu__list" id="main-menu">
+            <li class="menu__item">
+                <a href="/about/" class="menu__link">
+                    <div class="menu__item-sprite sprite-alarm"></div>
+                    <span class="menu__item-name">Об отеле</span>
+                </a>
+            </li>
+            
+            <li class="menu__item">
+                <a href="/rooms/" class="menu__link">
+                    <div class="menu__item-sprite sprite-bed"></div>
+                    <span class="menu__item-name">Номера</span>
+                </a>
+            </li>
+            
+            <li class="menu__item">
+                <a href="/bar-restaurant/" class="menu__link">
+                    <div class="menu__item-sprite sprite-coffee"></div>
+                    <span class="menu__item-name">Рестораны</span>
+                </a>
+            </li>
+            
+            <li class="menu__item">
+                <a href="/relax/" class="menu__link">
+                    <div class="menu__item-sprite sprite-runner"></div>
+                    <span class="menu__item-name">Развлечения</span>
+                </a>
+            </li>
+            
+            <li class="menu__item">
+                <a href="/events/" class="menu__link">
+                    <div class="menu__item-sprite sprite-party"></div>
+                    <span class="menu__item-name">Мероприятия</span>
+                </a>
+            </li>
+            
+            <li class="menu__item">
+                <a href="/about/how-to-find/" class="menu__link">
+                    <div class="menu__item-sprite sprite-map"></div>
+                    <span class="menu__item-name">Карта</span>
+                </a>
+            </li>
+        
+        
+        </ul>
+    </div>
+    <div class="block-search">
+        <div class="header">
+            <div id="tl-search-form"></div>
+        </div>
+    </div>
+</header>
+
+<div class="second-navigation brown-bg">
+    <div class="second-navigation__wrap">
+        <a class="second-navigation__title-link" href="/about/"><span class="second-navigation__title">Предложения:</span></a>
+        
+    </div>
+</div>
+
+
+<div class="content__block about-hotel-info">
+    
+    <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+            <a href="/" title="Главная" itemprop="url">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">Предложения</li>
+    </ul>
+    <h1 class="about-hotel-content__title">Раннее бронирование – скидка 15%!</h1>
+    <div class="content-box">
+        <div class="content-img">
+            <img src="img/offers-img-1.png" alt="">
+        </div>
+        <div class="content-box__body">
+            <p>
+            </p>
+            <p>
+                Ваше желание о безупречно спланированной поездке в Красную Поляну мы исполним с легкостью!
+            </p>
+            
+            <p>
+                ПОУЛЧИТЕ СКИДКУ 15% ПРИ РАННЕМ БРОНИРОВАНИИ В КОРПОРАТИВНОМ ЦЕНТРЕ СБЕРБАНКА!
+            </p>
+            
+            <div class="content-box__important">
+                Скидка действует при бронировании за 30 дней до даты заезда
+                и внесении предоплаты в размере 100% за весь период проживания *:
+            </div>
+            
+            <div class="content-box__alert">
+                <div class="content-box__alert-title"> В акции участвуют номера категории:</div>
+                
+                <ul class="ul-list">
+                    <li class="ul-list__item">Делюкс</li>
+                    <li class="ul-list__item">Супериор</li>
+                    <li class="ul-list__item">Люкс</li>
+                    <li class="ul-list__item">Улучшенный Люкс</li>
+                </ul>
+            
+            </div>
+    
+            <div class="offer-call">
+                <div class="offer-call__btn-layout">
+                    <a href="#" class="offer-call__btn">Забронируйте номер по акции!</a>
+                </div>
+                
+                <div class="offer-call__text"><span>* </span>Обратите внимание: при отмене или изменении бронирования, а также в случае незаезда
+                    взимается полная стоимость бронирования</div>
+            </div>
+        </div>
+        <!--content-box__body-->
+        
+    
+        
+    </div>
+    
+    
+    
+    
+    
+
+</div>
+<a href="" class="up-btn">
+    <div class="up-btn__wrap">
+        <div class="up-btn__arrow"></div>
+        <span>Наверх</span>
+        <div class="up-btn__arrow"></div>
+    </div>
+</a>
+<footer>
+    <div class="footer">
+        <section class="footer__links-desktop">
+            <div class="contacts-link">
+                <div class="politik-contact-link">
+                    <a href="" class="link-politik">Политика конфидециальности</a>
+                    <a href="/about/how-to-find/">Контакты</a>
+                </div>
+                <a href="/booking/" target="_blank" class="link-booking">
+                    <img src="http://sbcc.ru/local/templates/main/img/time-left.png" width="27" height="27" Alt="Забронировать">
+                    <span>Забронировать</span>
+                </a>
+            </div>
+        </section>
+        <section class="footer__links-mobile">
+            <a href="/contacts/">Контакты</a>
+            <a href="room-booking.html">
+                <span>Забронировать</span>
+            </a>
+        </section>
+        <section class="footer__tel">
+            8 (862) 245-52-20&nbsp; &nbsp;<a href="mailto:reservation@sbcc.ru">reservation@sbcc.ru</a></section>
+        <section class="footer__social">
+            <a href="" class="footer__social-icon">
+                <img src="http://sbcc.ru/local/templates/main/img/fb.png" alt="Facebook">
+            </a>
+            <a href="//www.instagram.com/sberbank.corporate.center/" class="footer__social-icon">
+                <img src="http://sbcc.ru/local/templates/main/img/inst.png" alt="Instagram">
+            </a>
+        
+        </section>
+    </div>
+</footer>
+<div class="overlay"></div>
+
+<script type="text/javascript" src="js/template_3250306041755006b14e76b029924c1f.js"></script>
+<script type="text/javascript">
+    bxSession.mess.messSessExpired = 'Ваш сеанс работы с сайтом завершен из-за отсутствия активности в течение 24 мин. Введенные на странице данные не будут сохранены. Скопируйте их перед тем, как закроете или обновите страницу.';
+    bxSession.Expand(1440, '73bd464179e7b53c3708e2f203115969', true, 'ad23cbaed79c9959bd2a2cc85f684a2b');
+</script>
+<script type="text/javascript">var _ba = _ba || [];
+_ba.push(["aid", "70041b5418d9ce49a5fedcd6e9a50b7d"]);
+_ba.push(["host", "sbcc.ru"]);
+(function () {
+    var ba = document.createElement("script");
+    ba.type = "text/javascript";
+    ba.async = true;
+    ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(ba, s);
+})();</script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.main-slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            lazyLoad: "progressive",
+            autoplay: true,
+            autoplayspeed: 2000,
+            slidesToShow: 1
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        ymaps.ready(init);
+        var myMap,
+            myPlacemark;
+
+        var isMobile = {
+            Android: function () {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function () {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function () {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function () {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function () {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function () {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            }
+        };
+
+
+        function init() {
+            myMap = new ymaps.Map("map", {
+                center: [43.669886, 40.260844],
+                zoom: 13,
+                controls: []
+            });
+
+            myPlacemark = new ymaps.Placemark([43.669886, 40.260844], {
+                hintContent: 'Корпоративный центр',
+                balloonContent: 'Корпоративный центр'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+
+            if (isMobile.any()) {
+                myMap.behaviors.disable('drag');
+            }
+
+            myMap.behaviors.disable('scrollZoom');
+            myMap.controls.add('zoomControl')
+
+        }
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $(window).on('load resize', function () {
+            if ($(window).width() < 800) {
+                $('.gym__table').hide();
+                $('.gym__table-mobile').hide();
+                $('.gym__table-mobile:eq(0)').show();
+            } else {
+                $('.gym__table').hide();
+                $('.gym__table:eq(0)').show();
+                $('.gym__table-mobile').hide();
+            }
+        });
+        $(document).ready(function () {
+            var item = $('.gym__table');
+            var mobileitem = $('.gym__table-mobile');
+            var n = 0;
+            var count = $('.shed_date').length;
+            $('.date-next-arrow').on("click", function () {
+                var active = $(".shed_date.active");
+                var checkDayNext = active.index() + 1;
+                if (checkDayNext < count) {
+                    n = n + 1;
+                    if ($(window).width() < 800) {
+                        $('.gym__table-mobile').hide();
+                        $('.gym__table-mobile:eq(' + n + ')').show();
+                        active.removeClass('active').hide();
+                        $(".shed_date:eq(" + checkDayNext + ")").addClass('active').show();
+                    } else {
+                        $('.gym__table').hide();
+                        $('.gym__table:eq(' + n + ')').show();
+                        active.removeClass('active').hide();
+                        $(".shed_date:eq(" + checkDayNext + ")").addClass('active').show();
+                    }
+                }
+                ;
+            });
+            $('.date-prev-arrow').on("click", function () {
+                var active = $(".shed_date.active");
+                var checkDayNext = active.index() + 1;
+                if (checkDayNext > 1) {
+                    n = n - 1;
+                    if ($(window).width() < 800) {
+                        $('.gym__table-mobile').hide();
+                        $('.gym__table-mobile:eq(' + n + ')').show();
+                        active.removeClass('active').hide();
+                        $(".shed_date:eq(" + n + ")").addClass('active').show();
+                    } else {
+                        $('.gym__table').hide();
+                        $('.gym__table:eq(' + n + ')').show();
+                        active.removeClass('active').hide();
+                        $(".shed_date:eq(" + n + ")").addClass('active').show();
+                    }
+                } else {
+                    /*$('.date-prev-arrow').off( "click" );*/
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
